@@ -1,0 +1,18 @@
+.tiles {
+  width: 75px;
+  height: 75px;
+  border: 3px solid;
+
+}
+
+#cellContainer {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 225px;
+  margin: auto;
+}
+
+#gameContainer {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
