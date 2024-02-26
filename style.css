@@ -1,4 +1,4 @@
-.tiles {
+.cell {
   width: 75px;
   height: 75px;
   border: 2px solid;
@@ -6,10 +6,7 @@
   font-size: 50px;
   cursor: pointer;
   line-height: 75px;
-  
 }
-
-
 
 #gameContainer {
   font-family: Arial, Helvetica, sans-serif;
