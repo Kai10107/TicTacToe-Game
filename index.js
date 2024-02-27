@@ -1,4 +1,4 @@
-//..
+
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
@@ -15,6 +15,8 @@ const winConditions = [
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer= "X";
 let running = false;
+
+initializeGame();
 
 //ZACH
 function initializeGame(){
@@ -79,7 +81,11 @@ function checkWinner(){
 }
 
 function restartGame(){
-
+  currentPlayer = "X";
+  options = ["", "", "", "", "", "", "", "", ""];
+  statusText.textContent = `${currentPlayer}'s turn`;
+  cells.forEach(cell => cell.textContent = "");
+  running = true;
 }
  function updateScoreboard(){
   
