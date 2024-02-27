@@ -1,3 +1,4 @@
+//zach
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
@@ -21,6 +22,7 @@ let scoreO = 0;
 
 initializeGame();
 
+//Zach 
 function initializeGame() {
   cells.forEach(cell => cell.addEventListener("click", cellClicked))
   restartBtn.addEventListener("click", restartGame);
@@ -28,7 +30,7 @@ function initializeGame() {
   statusText.textContent = `${currentPlayer}'s Turn`;
   running = true;
 }
-
+//longo
 function cellClicked() {
   const cellIndex = parseInt(this.getAttribute("cellIndex"));
 
@@ -39,17 +41,17 @@ function cellClicked() {
   updateCell(this, cellIndex);
   checkWinner();
 }
-
+//kai
 function updateCell(cell, index) {
   options[index] = currentPlayer;
   cell.textContent = currentPlayer;
 }
-
+//zach
 function changePlayer() {
   currentPlayer = (currentPlayer == "X") ? "O" : "X";
   statusText.textContent = `${currentPlayer}'s Turn`;
 }
-
+//longo
 function checkWinner() {
   let roundWon = false;
 
@@ -84,7 +86,7 @@ function checkWinner() {
     changePlayer();
   }
 }
-
+//kai
 function restartGame() {
   currentPlayer = "X";
   options = ["", "", "", "", "", "", "", "", ""];
@@ -92,7 +94,7 @@ function restartGame() {
   cells.forEach(cell => cell.textContent = "");
   running = true;
 }
-
+//kai
 function updateScoreboard() {
   scoreXElement.textContent = `Score X: ${scoreX}`;
   scoreOElement.textContent = `Score O: ${scoreO}`;
