@@ -24,7 +24,14 @@ function initializeGame(){
 }
 
 function cellClicked(){
+const cellindex =this.getAttribute("cellindex");
 
+if (options[cellindex] != "" || !running){
+   return
+}
+
+updateCell(this, cellindex);
+checkWinner();
 }
 
 function updateCell(){
