@@ -23,6 +23,7 @@ function initializeGame(){
   statusText.textContent = `${currentPlayer}'s Turn`;
 }
 
+//Kai
 function cellClicked(){
 const cellindex =this.getAttribute("cellindex");
 
@@ -35,7 +36,8 @@ checkWinner();
 }
 
 function updateCell(){
-
+  options[index] = currentPlayer;
+  cell.textContent = currentPlayer;
 }
 
 function changePlayer(){
