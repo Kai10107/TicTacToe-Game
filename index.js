@@ -1,3 +1,4 @@
+//..
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
@@ -15,8 +16,11 @@ let options = ["","","","","","","","",""];
 let currentPlayer= "X";
 let running = false;
 
+//ZACH
 function initializeGame(){
-
+  cells.forEach(cell => cell.addEventListener("click", cellClicked))
+  restartBtn.addEventListener("click", restartGame);
+  statusText.textContent = `${currentPlayer}'s Turn`;
 }
 
 function cellClicked(){
