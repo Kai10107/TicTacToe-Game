@@ -32,7 +32,7 @@ function initializeGame() {
 }
 //longo
 function cellClicked() {
-  const cellIndex = parseInt(this.getAttribute("cellIndex"));
+  const cellIndex = this.getAttribute("cellIndex");
 
   if (options[cellIndex] != "" || !running) {
     return;
